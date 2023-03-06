@@ -10,7 +10,10 @@ function App() {
     const handleAddTask = (e: React.FormEvent) => {
         e.preventDefault();
         if (task !== "") {
-            setTasks([...tasks, { id: Date.now(), task: task, isDone: false }]);
+            setTasks([
+                ...tasks,
+                { id: Date.now(), title: task, isDone: false },
+            ]);
             setTask("");
         }
     };
